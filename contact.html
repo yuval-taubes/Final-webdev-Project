@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="stylesheets/contact.css" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <title>Title</title>
+  </head>
+  <body>
+    <!--This is the tutorial I used for the front end https://www.youtube.com/watch?v=s6rF1Josk9M&t=205s&ab_channel=Webdev -->
+    <!-- this is the tutorial I used for the back end https://www.youtube.com/watch?v=In0nB0ABaUk&ab_channel=WebDevSimplifiedWebDevSimplified -->
+
+    <div class="row">
+      <!-- makes this a navbar and also to expand from a lightbox when it reaches a medium sized screen (list of breakpoints here https://getbootstrap.com/docs/5.0/layout/breakpoints/)  -->
+      <nav class="navbar navbar-expand-lg">
+        <!-- this is The Lena Taubes pops up in the top left, not a bootstrap class -->
+        <div class="" id="NameLogo">Lena Taubes</div>
+        <!-- this is the actual ligthbox, and settings for it 
+        navbar-dark makes the lightbox a dark color
+        type button makes it toggleable
+        data-toggle way it visually animates
+        main navigation is how what information to put in the lightbox-->
+        <button
+          class="navbar-toggler navbar-light"
+          type="button"
+          data-toggle="collapse"
+          data-target="#main-navigation"
+        >
+          <!-- this is the icon for the lightbox -->
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- this is the place where the links are stored, and this is where it tells them what to collapse into a lightbox -->
+        <div class="collapse navbar-collapse" id="main-navigation">
+          <ul class="nav">
+            <!-- nav item is a prebuilt class -->
+            <li class="nav-item">
+              <!-- nav link is a prebuilt class (just handy to use) -->
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <div class="dropdown">
+                <a
+                  class="dropdown-toggle nav-link"
+                  data-toggle="dropdown"
+                  href="#"
+                  >Galleries</a
+                >
+                <ul class="dropdown-menu" role="menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Motorcycle</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Motorvechile</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Other</a>
+                  </li>
+                  <li class="divider nav-item"></li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <!-- nav link is a prebuilt class (just handy to use) -->
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="get-in-touch">
+        <h1 class="title">get in touch</h1>
+
+        <form>
+          <div class="container">
+            <div class="contact-form row">
+              <div class="form-field col-lg-5">
+                <input
+                  id="name"
+                  class="input-text"
+                  type="text"
+                  name=""
+                  placeholder="First And Last Name"
+                />
+                <label for="name" class="label">Name</label>
+              </div>
+              <div class="form-field col-lg-5">
+                <input
+                  id="email"
+                  class="input-text"
+                  type="email"
+                  name=""
+                  placeholder="example@email.com"
+                />
+                <label for="email" class="label">Email</label>
+              </div>
+              <div class="form-field col-lg-5">
+                <input id="company" class="input-text" type="text" name="" />
+                <label for="company" class="label">Company name</label>
+              </div>
+              <div class="form-field col-lg-5">
+                <input
+                  id="phone"
+                  class="input-text"
+                  type="text"
+                  name=""
+                  placeholder="(xxx)-xxx-xxxx"
+                />
+                <label for="phone" class="label">contact number</label>
+              </div>
+              <div class="form-field col-lg-11">
+                <input
+                  id="message"
+                  class="input-text"
+                  type="text"
+                  name=""
+                  placeholder="Your Message Here"
+                />
+                <label for="message" class="label">Message</label>
+              </div>
+              <div class="form-field col-lg-12">
+                <input
+                  class="submit-btn"
+                  type="button"
+                  value="Submit"
+                  name=""
+                  onclick="checkInput()"
+                />
+              </div>
+              <div col-lg-12>
+                <div id="errorElement"><p class="errorText"></p></div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <script src="scripts/contact.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

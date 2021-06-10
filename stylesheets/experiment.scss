@@ -1,0 +1,55 @@
+
+
+/*--- page ---*/
+// this is the body, pretty basic config
+body {
+    padding: 0;
+    margin: 0;
+    background: white;
+    height: 100vh;
+    }
+
+/*--- navigation bar ---*/
+
+.navbar {
+    // making the background a white color
+    background: white;
+}
+
+.navbar-collapse {
+    // when the navbar is collapsed I want the lightbox to be shoved over to the right
+    justify-content: flex-end;
+    align-items: flex-end;
+    // flex grow is automatically set to 1 as a defualt in bootstrap, by setting it to default and using the !importat my nav (when on a large screen) won't get messed up
+    flex-grow: 0 !important;
+}
+
+.nav-link {
+    color: black;
+    // making the cursor a pointer when hovering over the anchors
+    cursor: pointer;
+    font-size: 15px;
+    // the imported font (poppins)
+    font-family: "Poppins", sans-serif;
+    padding: 15px;
+    &:hover,
+    &:focus {
+        // when I hover and focus I want the nav links to change to a gradient color
+        background: linear-gradient(to right, #f4524d 0%, #5543ca 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+#NameLogo {
+    // makes the "Lena Taubes" a gradient
+    background: linear-gradient(to right, #f4524d 0%, #5543ca 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    // the imported font (poppins)
+    font-family: "Poppins", sans-serif;
+    padding: 30px;
+    text-align: center;
+}
+

@@ -1,0 +1,50 @@
+/*--- page ---*/
+body {
+  padding: 0;
+  margin: 0;
+  background: white;
+  height: 100vh;
+}
+
+/*--- navigation bar ---*/
+.navbar {
+  background: white;
+}
+
+.navbar-collapse {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-flex: 0 !important;
+      -ms-flex-positive: 0 !important;
+          flex-grow: 0 !important;
+}
+
+.nav-link {
+  color: black;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  padding: 15px;
+}
+
+.nav-link:hover, .nav-link:focus {
+  background: -webkit-gradient(linear, left top, right top, from(#f4524d), to(#5543ca));
+  background: linear-gradient(to right, #f4524d 0%, #5543ca 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#NameLogo {
+  background: -webkit-gradient(linear, left top, right top, from(#f4524d), to(#5543ca));
+  background: linear-gradient(to right, #f4524d 0%, #5543ca 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  padding: 30px;
+  text-align: center;
+}

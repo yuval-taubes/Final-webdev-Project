@@ -1,0 +1,62 @@
+.navbar {
+  background: white;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navbar-collapse {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-flex: 0 !important;
+      -ms-flex-positive: 0 !important;
+          flex-grow: 0 !important;
+}
+
+.nav-link {
+  color: black;
+  cursor: pointer;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  padding: 30px;
+}
+
+.nav-link:hover, .nav-link:focus {
+  background: -webkit-gradient(linear, left top, right top, from(#f4524d), to(#5543ca));
+  background: linear-gradient(to right, #f4524d 0%, #5543ca 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#NameLogo {
+  background: -webkit-gradient(linear, left top, right top, from(#f4524d), to(#5543ca));
+  background: linear-gradient(to right, #f4524d 0%, #5543ca 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  padding: 30px;
+  text-align: center;
+}
+
+#myCarousel1 {
+  -webkit-box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
+}
+
+.myCarousels {
+  -webkit-box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
+}
+
+/*--- page ---*/
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url("images/edited-background-page.png");
+  background-repeat: no-repeat;
+}
