@@ -11,18 +11,15 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
-
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <title>Title</title>
+    <title>Home</title>
+    <style>
+
+    </style>
   </head>
   <body>
-  
-    <!--This is the tutorial I used for the front end https://www.youtube.com/watch?v=s6rF1Josk9M&t=205s&ab_channel=Webdev -->
-    <!-- this is the tutorial I used for the back end https://www.youtube.com/watch?v=In0nB0ABaUk&ab_channel=WebDevSimplifiedWebDevSimplified -->
-
-
     <!-- makes this a navbar and also to expand from a menu when it reaches a medium sized screen (list of breakpoints here https://getbootstrap.com/docs/5.0/layout/breakpoints/)  
     It also makes it so the name logo and nav links are on opposite sides of the screen-->
     <nav class="navbar navbar-expand-lg justify-content-between">
@@ -102,88 +99,80 @@
       </div>
     </nav>
 
-      <!-- the get in touch at the top of the screen -->
-      <section class="get-in-touch">
-        <h1 class="title">get in touch</h1>
-        
-        <form>
-          <!-- div to hold the contact us form -->
-          <div class="container">
+    <!-- gallery tutroial i followed https://www.youtube.com/watch?v=h5v2LVFmbMY-->
+    <div class="container-fluid">
 
-            <!-- a row to hol columns -->
-            <div class="contact-form row">
+      <div class="row mt-4">
 
-              <!-- a form field that takes up 5 of the available 12 slot when in a large screen and usees all available space when smaller than a lg screen -->
-              <div class="form-field col-lg-5">
+        <div class="item col-sm-6 col-md-4 mb-3">
+          <a href="images/gallery-1.jpg" class="fancybox" data-fancybox="gallery1">
+            <img src="images/gallery-1.jpg" width="100%" height="100%">
+          </a>
+        </div>
+        <div class="item col-sm-6 col-md-4 mb-3">
+          <a href="images/gallery-2.jpg" class="fancybox" data-fancybox="gallery1">
+            <img src="images/gallery-2.jpg" width="100%" height="100%">
+          </a>
+        </div>
+        <div class="item col-sm-6 col-md-4 mb-3">
+          <a href="images/gallery-3.jpg" class="fancybox" data-fancybox="gallery1">
+            <img src="images/gallery-3.jpg" width="100%" height="100%">
+          </a>
+        </div>
+        <div class="item col-sm-6 col-md-4 mb-3">
+          <a href="images/gallery-4.jpg" class="fancybox" data-fancybox="gallery1">
+            <img src="images/gallery-4.jpg" width="100%" height="100%">
+          </a>
+        </div>
+        <div class="item col-sm-6 col-md-4 mb-3">
+          <a href="images/gallery-5.jpg" class="fancybox" data-fancybox="gallery1">
+            <img src="images/gallery-5.jpg" width="100%" height="100%">
+          </a>
+        </div>
+        <div class="item col-sm-6 col-md-4 mb-3">
+          <a href="images/gallery-6.jpg" class="fancybox" data-fancybox="gallery1">
+            <img src="images/gallery-6.jpg" width="100%" height="100%">
+          </a>
+        </div>
+        <div class="item col-sm-6 col-md-4 mb-3">
+          <a href="images/gallery-7.jpg" class="fancybox" data-fancybox="gallery1">
+            <img src="images/gallery-7.jpg" width="100%" height="100%">
+          </a>
+        </div>
+        <div class="item col-sm-6 col-md-4 mb-3">
+          <a href="images/gallery-8.jpg" class="fancybox" data-fancybox="gallery1">
+            <img src="images/gallery-8.jpg" width="100%" height="100%">
+          </a>
+        </div>
+        <div class="item col-sm-6 col-md-4 mb-3">
+          <a href="images/gallery-9.jpg" class="fancybox" data-fancybox="gallery1">
+            <img src="images/gallery-9.jpg" width="100%" height="100%">
+          </a>
+        </div>
+        <div class="item col-sm-6 col-md-4 mb-3">
+          <a href="images/gallery-10.jpg" class="fancybox" data-fancybox="gallery1">
+            <img src="images/gallery-10.jpg" width="100%" height="100%">
+          </a>
+        </div>
+        <div class="item col-sm-6 col-md-4 mb-3">
+          <a href="images/gallery-11.jpg" class="fancybox" data-fancybox="gallery1">
+            <img src="images/gallery-11.jpg" width="100%" height="100%">
+          </a>
+        </div>
+        <div class="item col-sm-6 col-md-4 mb-3">
+          <a href="images/gallery-tbd.jpg" class="fancybox" data-fancybox="gallery1">
+            <img src="images/gallery-tbd.jpg" width="100%" height="100%">
+          </a>
+        </div>
 
-                <!-- Name input known as nameInput in javascript file -->
-                <input
-                  id="name"
-                  class="input-text"
-                  type="text"
-                  name=""
-                  placeholder="First And Last Name"
-                />
-                <!-- the label for name input -->
-                <label for="name" class="label">Name</label>
-              </div>
+      </div>
 
-              <!-- a form field that takes up 5 of the available 12 slot when in a large screen and usees all available space when smaller than a lg screen -->
-              <div class="form-field col-lg-5">
-                <input
-                  id="email"
-                  class="input-text"
-                  type="email"
-                  name=""
-                  placeholder="example@email.com"
-                />
-                <label for="email" class="label">Email</label>
-              </div>
-              <div class="form-field col-lg-5">
-                <input id="company" class="input-text" type="text" name="" />
-                <label for="company" class="label">Company name</label>
-              </div>
-              <div class="form-field col-lg-5">
-                <input
-                  id="phone"
-                  class="input-text"
-                  type="text"
-                  name=""
-                  placeholder="(xxx)-xxx-xxxx"
-                />
-                <label for="phone" class="label">contact number</label>
-              </div>
-              <div class="form-field col-lg-11">
-                <input
-                  id="message"
-                  class="input-text"
-                  type="text"
-                  name=""
-                  placeholder="Your Message Here"
-                />
-                <label for="message" class="label">Message</label>
-              </div>
-              <div class="form-field col-lg-12">
-                <input
-                  class="submit-btn"
-                  type="button"
-                  value="Submit"
-                  name=""
-                  onclick="checkInput()"
-                />
-              </div>
-              <div col-lg-12>
-                <div id="errorElement"><p class="errorText"></p></div>
-              </div>
-            </div>
-          </div>
-        </form>
-      </section>
+    </div>
 
 
-    <script src="scripts/contact.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <!-- <script src="scripts/background.js"></script> -->
   </body>
 </html>

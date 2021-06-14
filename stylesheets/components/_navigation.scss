@@ -2,8 +2,8 @@
 
 .navbar {
     // making the background a white color
-    background: white;
-    justify-content: flex-end;
+    background-color: white;
+
 }
 
 .navbar-collapse {
@@ -36,9 +36,9 @@
     background: linear-gradient(to right, #f4524d 0%, #5543ca 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 40px;
+    font-size: 60px;
     // the imported font (poppins)
     font-family: "Poppins", sans-serif;
-    padding: 30px;
+    padding: 10px;
     text-align: center;
 }

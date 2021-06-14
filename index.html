@@ -25,116 +25,185 @@
 
     <title>Home</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <style></style>
+    <link rel="stylesheet" href="stylesheets/pages/experiment.css" />
+    <style>
+
+      /* im using this body to add the image to my background */
+      body{
+        /* img url */
+        background-image: url('../images/edited-background-page.png');
+
+        /* make sure the photo covers the background */
+	      background-size: cover;
+
+        /* always wanting in to take 100% of the screen */
+        min-height: 100%;
+        min-width: 100%;
+
+        /* this allows me to set position location */
+        position: absolute;
+
+        /* make sure it starts at the right place */
+        left: 0;
+        top: 0;
+      }
+
+    </style>
   </head>
 
   <body>
-    <!-- this entire website is one row. This is blatetly obvious when full screen however  -->
-    <div class="row">
-      <!-- makes this a navbar and also to expand from a lightbox when it reaches a medium sized screen (list of breakpoints here https://getbootstrap.com/docs/5.0/layout/breakpoints/)  -->
-      <nav
-        class="
-          navbar navbar-expand-lg
-          flex-lg-column
-          align-items-lg-center
-          col-lg-3
-        "
+
+
+    <!-- makes this a navbar and also to expand from a menu when it reaches a medium sized screen (list of breakpoints here https://getbootstrap.com/docs/5.0/layout/breakpoints/)  
+    It also makes it so the name logo and nav links are on opposite sides of the screen-->
+    <nav class="navbar navbar-expand-lg justify-content-between">
+
+      <!-- this is The Lena Taubes pops up in the top left -->
+      <div id="NameLogo">Lena Taubes</div>
+
+      <!-- this does a couple things, it is the button settings for the menu and it also determines wheher the navbar is in light mode or dark (read here for more info https://getbootstrap.com/docs/5.0/components/navbar/#color-schemes)-->
+      <button
+        class="navbar-toggler navbar-light"
+        type="button"
+        data-toggle="collapse"
+        data-target="#main-navigation"
       >
-        <!-- this is The Lena Taubes pops up in the top left, not a bootstrap class -->
-        <div class="" id="NameLogo">Lena Taubes</div>
-        <!-- this is the actual ligthbox, and settings for it 
-          navbar-dark makes the lightbox a dark color
-          type button makes it toggleable
-          data-toggle way it visually animates
-          main navigation is how what information to put in the lightbox-->
-        <button
-          class="navbar-toggler navbar-light"
-          type="button"
-          data-toggle="collapse"
-          data-target="#main-navigation"
-        >
-          <!-- this is the icon for the lightbox -->
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- this is the place where the links are stored, and this is where it tells them what to collapse into a lightbox -->
-        <div class="collapse navbar-collapse" id="main-navigation">
-          <ul class="nav flex-lg-column">
-            <!-- nav item is a prebuilt class -->
-            <li class="nav-item">
-              <!-- nav link is a prebuilt class (just handy to use) -->
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
 
-            <li class="nav-item">
-              <div class="dropdown">
-                <a
-                  class="dropdown-toggle nav-link"
-                  data-toggle="dropdown"
-                  href="#"
-                  >Galleries</a
-                >
-                <ul class="dropdown-menu" role="menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Motorcycle</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Motorvechile</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Other</a>
-                  </li>
-                  <li class="divider nav-item"></li>
-                </ul>
-              </div>
-            </li>
+        <!-- this is the actual button menu-->
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <li class="nav-item">
-              <!-- nav link is a prebuilt class (just handy to use) -->
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <!-- this is the place where the links are stored, and this is where it tells them what to collapse into a menu -->
+      <div class="collapse navbar-collapse" id="main-navigation">
+
+        <!-- prebuilt class for ul named nav -->
+        <ul class="nav">
+
+          <!-- nav item is a prebuilt class for list items-->
+          <li class="nav-item">
+
+            <!-- nav link is a prebuilt class for anchor tags -->
+            <a class="nav-link" href="index.html">Home</a>
+
+          </li>
+          <!-- nav item is a prebuilt class for list items-->
+          <li class="nav-item">
+
+            <!-- this is the dropdown for the galleries (gotten from here, 1st solution https://stackoverflow.com/questions/12458522/bootstrap-dropdown-not-working)  -->
+            <div class="dropdown">
+
+              <!-- in this class it states to be treated as a nav-link and when clicked to open a dropdown menu -->
+              <a
+                              
+                class="dropdown-toggle nav-link"
+                data-toggle="dropdown"
+                href="#"
+                >Galleries</a
+              >
+              <!-- tells the ul that this is a dropdown menu -->
+              <ul class="dropdown-menu" role="menu">
+
+                <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
+                <li class="nav-item">
+
+                  <!-- nav item is a prebuilt class for list items-->
+                  <a class="nav-link" href="gallery1.html">Motorcycle</a>
+                  
+                </li>
+                <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
+                <li class="nav-item">
+
+                  <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
+                  <a class="nav-link" href="gallery2.html">Motorvechile</a>
+
+                </li>
+                
+                <!--part of the dropdown menu -->
+                <li class="divider nav-item"></li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- link to contact page -->
+          <li class="nav-item">
+            <!-- nav link is a prebuilt class (just handy to use) -->
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- making a row to store my carosouls and profile text/heading -->
+    <div class="row">
+
+      <!-- when it turns into a medium type screen I would like it to take the whole space there is, however only take half when your screen is large -->
+      <div class=" col-sm-12 col-md-12 col-lg-6 profile-container">
+
+        <!-- just some about me text -->
+        <h1 class="profile-heading">
+          About Me
+        </h1>
+
+        <!-- The profile text -->
+        <p class="profile-text">
+          Hi, I am Lena Taubes a photographer. This website was made as a portfolio for me, and showcases some of my work. If you want to see more come visit my facebook <a href="https://www.facebook.com/lena.taubes"> here.</a>
+        </p>
+
+      </div>
 
       <!-- tutorial https://www.youtube.com/watch?v=ku_97a6Bgkg&ab_channel=AdrianTwarogAdrianTwarog -->
-      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+
+      <!-- when it turns into a medium type screen I would like it to take the whole space there is, however only take half when your screen is large -->
+      <div class="col-sm-12 col-md-12 col-lg-6 p-4">
+        <!-- the div that holdes the carosuel -->
         <div
           id="myCarousel1"
           data-ride="carousel"
           class="carousel slide carousel-fade"
         >
+        <!-- this is the carousel indicators at the bottom (the lines) -->
           <ol class="carousel-indicators">
             <li
               data-target="#myCarousel1"
               data-slide-to="0"
               class="active"
             ></li>
+            <!-- this is the first line in the carosuel which will take you to image 1 -->
             <li data-target="#myCarousel1" data-slide-to="1"></li>
+            <!-- this is the first line in the carosuel which will take you to image 2 -->
             <li data-target="#myCarousel1" data-slide-to="2"></li>
+            <!-- this is the first line in the carosuel which will take you to image 3 -->
             <li data-target="#myCarousel1" data-slide-to="3"></li>
+            <!-- this is the first line in the carosuel which will take you to image 4 -->
             <li data-target="#myCarousel1" data-slide-to="4"></li>
           </ol>
+          
           <div class="carousel-inner">
+
+            <!-- making this the first carousel item, making it a flex box and then making the contect centered inside of it -->
             <div
               class="carousel-item active d-flex justify-content-center"
               data-interval="true"
             >
+            <!-- the first image for each image I make sure that it takes up 100% of the available width in the div that it can -->
               <img
                 class="center-block w-100"
                 src="images/slider-12.jpg"
                 alt="First slide"
               />
             </div>
+            <!-- the second image -->
             <div
               class="carousel-item d-flex justify-content-center"
               data-interval="2000"
             >
+            <!-- third image -->
               <img
                 class="center-block w-100"
                 src="images/slider-20.jpg"
                 alt="second slide"
               />
             </div>
+            <!-- fourth image -->
             <div
               class="carousel-item d-flex justify-content-center"
               data-interval="2000"
@@ -178,7 +247,7 @@
           </a>
         </div>
       </div>
-      <div class="col-sm-12 col-md-12 p-4">
+      <div class="col-sm-12 col-md-12 col-lg-6  p-4">
         <div
           id="myCarousels"
           data-ride="carousel"
@@ -211,7 +280,7 @@
             <div class="carousel-item" data-interval="2000">
               <img
                 class="d-block w-100"
-                src="images/slider-22.jpg"
+                src="images/slider-6.jpg"
                 alt="third slide"
               />
             </div>
@@ -238,7 +307,7 @@
           </a>
         </div>
       </div>
-      <div class="col-sm-12 col-md-12 p-4">
+      <div class="col-sm-12 col-md-12 col-lg-6 p-4">
         <div
           id="myCarousels"
           data-ride="carousel"
@@ -299,6 +368,14 @@
         </div>
       </div>
     </div>
+  </div>
+
+
+    <!-- <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+        <span class="text-muted">Lena Taubes</span>
+      </div>
+    </footer> -->
     <!-- just some more importing with bootstrap CDN snippet-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
