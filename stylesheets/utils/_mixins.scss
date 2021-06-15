@@ -1,0 +1,5 @@
+// adding a mixin for gradient text (used in nav and contact)
+@mixin gradient_text {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

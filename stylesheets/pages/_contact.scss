@@ -1,60 +1,80 @@
-.get-in-touch{
-    max-width: 1000px;
-    margin: 50px auto;
-    position: relative;
-    box-shadow: 0 10px 30px 0px rgba(0,0,0,0.1);
-    padding: 30px;
-    .title{
-        text-transform: uppercase;
-        text-align: center;
-        letter-spacing: 3px;
-        font-size: 3em;
-        line-height: 48px;
-        padding-bottom: 20px;
-        color: #5543ca;
-        background: linear-gradient(to right, #f4524d 0%, #5543ca 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+@import "../utils/variables";
+@import "../utils/mixins";
 
-    }
+// the get in touch at the top
+.get-in-touch {
+  max-width: 1000px;
+  margin: 50px auto;
+  position: relative;
+  // adding a shadow to add more depth to the website
+  box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background-color: white;
+  .title {
+    // making the text all upercase
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 3em;
+    line-height: 48px;
+    padding-bottom: 20px;
+    color: #5543ca;
+    background: linear-gradient(to right, $grad-color-red 0%, $grad-color-purple 100%);
+    @include gradient_text;
+  }
 }
 
-.contact-form{
-    position: relative;
-    margin: 32px;
-.form-field{
+// the div that holds the divs that holds the forms and labels
+.contact-form {
+  position: relative;
+  margin: 32px;
+
+  // the div that holds one input and label each
+  .form-field {
     position: relative;
     margin: 32px;
 
-    &:focus{
-        outline: none;
+    &:focus {
+      // when I focus on the input I dont want a outline
+      outline: none;
     }
 
-    .input-text{
+    // the styyling for the form itself
+    .input-text {
+        // i want no outline
         outline: none;
         display: block;
         width: 100%;
         height: 36px;
+        // this makes the input have a purple underline
         border-width: 0 0 2px 0;
-        border-color: #5543ca;
+        border-color: $grad-color-purple;
         font-size: 18px;
         line-height: 26px;
+        // I want the font to be thick
         font-weight: 400;
     }
-    .label{
+    .label {
+        //positioning for the labels
         position: absolute;
         left: 20px;
         bottom: 30px;
+
+        //font styling
         font-size: 18px;
         line-height: 26px;
         font-weight: 400;
-        color: #5543ca;
+        color: $grad-color-purple;
         cursor: text;
+        // making all the text capitilized
         text-transform: capitalize;
     }
-    .submit-btn{
+    // the sumbit button to sumbit your form
+    .submit-btn {
         display: inline-block;
-        background-image: linear-gradient(125deg, #a72879, #064497);
+        //making the button background color a gradient
+        background-image: linear-gradient(125deg, $grad-color-purple, $grad-color-red);
+        //font styling
         color: white;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -63,10 +83,9 @@
         border: none;
         width: 200px;
         cursor: pointer;
+        }
+        .error-container {
+        text-align: center;
     }
-
+  }
 }
-}
-
-
-

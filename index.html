@@ -1,137 +1,101 @@
 <!-- Website Design taken from https://www.mpkelley.com/ -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="Description" content="Enter your description here" />
-    <!-- linking poppins here (font) -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-    <!-- linking bootstrap here  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
-    />
-    <!-- and here, did this with a handy extension known as bootstrap CDN snippet-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    />
 
-    <title>Home</title>
-    <link rel="stylesheet" href="stylesheets/style.css" />
-    <link rel="stylesheet" href="stylesheets/pages/experiment.css" />
-    <style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta />
 
-      /* im using this body to add the image to my background */
-      body{
-        /* img url */
-        background-image: url('../images/edited-background-page.png');
+  <!-- linking poppins here (font) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 
-        /* make sure the photo covers the background */
-	      background-size: cover;
+  <!-- linking bootstrap here  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" />
 
-        /* always wanting in to take 100% of the screen */
-        min-height: 100%;
-        min-width: 100%;
+  <!-- and here, did this with a handy extension known as bootstrap CDN snippet-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 
-        /* this allows me to set position location */
-        position: absolute;
+  <title>Home</title>
+  <link rel="stylesheet" href="stylesheets/style.css" />
 
-        /* make sure it starts at the right place */
-        left: 0;
-        top: 0;
-      }
+</head>
 
-    </style>
-  </head>
-
-  <body>
+<body>
 
 
-    <!-- makes this a navbar and also to expand from a menu when it reaches a medium sized screen (list of breakpoints here https://getbootstrap.com/docs/5.0/layout/breakpoints/)  
+  <!-- makes this a navbar and also to expand from a menu when it reaches a medium sized screen (list of breakpoints here https://getbootstrap.com/docs/5.0/layout/breakpoints/)  
     It also makes it so the name logo and nav links are on opposite sides of the screen-->
-    <nav class="navbar navbar-expand-lg justify-content-between">
+  <nav class="navbar navbar-expand-lg justify-content-between">
 
-      <!-- this is The Lena Taubes pops up in the top left -->
-      <div id="NameLogo">Lena Taubes</div>
+    <!-- this is The Lena Taubes pops up in the top left which links to her facebook -->
+    <a class= "nameLogoLink" href="https://www.facebook.com/lena.taubes">
+    <div class="nameLogo">Lena Taubes</div>
+    </a>
 
-      <!-- this does a couple things, it is the button settings for the menu and it also determines wheher the navbar is in light mode or dark (read here for more info https://getbootstrap.com/docs/5.0/components/navbar/#color-schemes)-->
-      <button
-        class="navbar-toggler navbar-light"
-        type="button"
-        data-toggle="collapse"
-        data-target="#main-navigation"
-      >
+    <!-- this does a couple things, it is the button settings for the menu and it also determines wheher the navbar is in light mode or dark (read here for more info https://getbootstrap.com/docs/5.0/components/navbar/#color-schemes)-->
+    <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#main-navigation">
 
-        <!-- this is the actual button menu-->
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <!-- this is the actual button menu-->
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <!-- this is the place where the links are stored, and this is where it tells them what to collapse into a menu -->
-      <div class="collapse navbar-collapse" id="main-navigation">
+    <!-- this is the place where the links are stored, and this is where it tells them what to collapse into a menu -->
+    <div class="collapse navbar-collapse main-navigation">
 
-        <!-- prebuilt class for ul named nav -->
-        <ul class="nav">
+      <!-- prebuilt class for ul named nav -->
+      <ul class="nav">
 
-          <!-- nav item is a prebuilt class for list items-->
-          <li class="nav-item">
+        <!-- nav item is a prebuilt class for list items-->
+        <li class="nav-item">
 
-            <!-- nav link is a prebuilt class for anchor tags -->
-            <a class="nav-link" href="index.html">Home</a>
+          <!-- nav link is a prebuilt class for anchor tags -->
+          <a class="nav-link nav-link-active" href="index.html">Home</a>
 
-          </li>
-          <!-- nav item is a prebuilt class for list items-->
-          <li class="nav-item">
+        </li>
+        <!-- nav item is a prebuilt class for list items-->
+        <li class="nav-item">
 
-            <!-- this is the dropdown for the galleries (gotten from here, 1st solution https://stackoverflow.com/questions/12458522/bootstrap-dropdown-not-working)  -->
-            <div class="dropdown">
+          <!-- this is the dropdown for the galleries (gotten from here, 1st solution https://stackoverflow.com/questions/12458522/bootstrap-dropdown-not-working)  -->
+          <div class="dropdown">
 
-              <!-- in this class it states to be treated as a nav-link and when clicked to open a dropdown menu -->
-              <a
-                              
-                class="dropdown-toggle nav-link"
-                data-toggle="dropdown"
-                href="#"
-                >Galleries</a
-              >
-              <!-- tells the ul that this is a dropdown menu -->
-              <ul class="dropdown-menu" role="menu">
+            <!-- in this class it states to be treated as a nav-link and when clicked to open a dropdown menu -->
+            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Galleries</a>
+            <!-- tells the ul that this is a dropdown menu -->
+            <ul class="dropdown-menu" role="menu">
+
+              <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
+              <li class="nav-item">
+
+                <!-- nav item is a prebuilt class for list items-->
+                <a class="nav-link" href="gallery1.html">Motorcycle</a>
+
+              </li>
+              <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
+              <li class="nav-item">
 
                 <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
-                <li class="nav-item">
+                <a class="nav-link" href="gallery2.html">Motorvechile</a>
 
-                  <!-- nav item is a prebuilt class for list items-->
-                  <a class="nav-link" href="gallery1.html">Motorcycle</a>
-                  
-                </li>
-                <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
-                <li class="nav-item">
+              </li>
 
-                  <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
-                  <a class="nav-link" href="gallery2.html">Motorvechile</a>
+              <!--part of the dropdown menu -->
+              <li class="divider nav-item"></li>
+            </ul>
+          </div>
+        </li>
 
-                </li>
-                
-                <!--part of the dropdown menu -->
-                <li class="divider nav-item"></li>
-              </ul>
-            </div>
-          </li>
-
-          <!-- link to contact page -->
-          <li class="nav-item">
-            <!-- nav link is a prebuilt class (just handy to use) -->
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+        <!-- link to contact page -->
+        <li class="nav-item">
+          <!-- nav link is a prebuilt class (just handy to use) -->
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main>
     <!-- making a row to store my carosouls and profile text/heading -->
     <div class="row">
 
@@ -145,7 +109,9 @@
 
         <!-- The profile text -->
         <p class="profile-text">
-          Hi, I am Lena Taubes a photographer. This website was made as a portfolio for me, and showcases some of my work. If you want to see more come visit my facebook <a href="https://www.facebook.com/lena.taubes"> here.</a>
+          Hi, I am Lena Taubes a photographer. This website was made as a portfolio for me, and showcases some of my
+          work.
+          If you want to see more come visit my facebook <a href="https://www.facebook.com/lena.taubes"> here.</a>
         </p>
 
       </div>
@@ -155,18 +121,10 @@
       <!-- when it turns into a medium type screen I would like it to take the whole space there is, however only take half when your screen is large -->
       <div class="col-sm-12 col-md-12 col-lg-6 p-4">
         <!-- the div that holdes the carosuel -->
-        <div
-          id="myCarousel1"
-          data-ride="carousel"
-          class="carousel slide carousel-fade"
-        >
-        <!-- this is the carousel indicators at the bottom (the lines) -->
+        <div id="myCarousel1" data-ride="carousel" class="carousel slide carousel-fade">
+          <!-- this is the carousel indicators at the bottom (the lines) -->
           <ol class="carousel-indicators">
-            <li
-              data-target="#myCarousel1"
-              data-slide-to="0"
-              class="active"
-            ></li>
+            <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
             <!-- this is the first line in the carosuel which will take you to image 1 -->
             <li data-target="#myCarousel1" data-slide-to="1"></li>
             <!-- this is the first line in the carosuel which will take you to image 2 -->
@@ -176,210 +134,152 @@
             <!-- this is the first line in the carosuel which will take you to image 4 -->
             <li data-target="#myCarousel1" data-slide-to="4"></li>
           </ol>
-          
+
           <div class="carousel-inner">
 
             <!-- making this the first carousel item, making it a flex box and then making the contect centered inside of it -->
-            <div
-              class="carousel-item active d-flex justify-content-center"
-              data-interval="true"
-            >
-            <!-- the first image for each image I make sure that it takes up 100% of the available width in the div that it can -->
-              <img
-                class="center-block w-100"
-                src="images/slider-12.jpg"
-                alt="First slide"
-              />
+            <div class="carousel-item active d-flex justify-content-center" data-interval="true">
+              <!-- the first image for each image I make sure that it takes up 100% of the available width in the div that it can -->
+              <img class="center-block w-100 gallery-img" src="images/slider-12.jpg" alt="First slide" />
             </div>
-            <!-- the second image -->
-            <div
-              class="carousel-item d-flex justify-content-center"
-              data-interval="2000"
-            >
-            <!-- third image -->
-              <img
-                class="center-block w-100"
-                src="images/slider-20.jpg"
-                alt="second slide"
-              />
+            <!-- the second image (data interval just states how many milliseconds you spend on a pages) -->
+            <div class="carousel-item d-flex justify-content-center gallery-img" data-interval="2000">
+              <!-- third image -->
+              <img class="center-block w-100 gallery-img" src="images/slider-20.jpg" alt="second slide" />
             </div>
             <!-- fourth image -->
-            <div
-              class="carousel-item d-flex justify-content-center"
-              data-interval="2000"
-            >
-              <img
-                class="center-block w-100"
-                src="images/slider-22.jpg"
-                alt="third slide"
-              />
+            <div class="carousel-item d-flex justify-content-center gallery-img" data-interval="2000">
+              <img class="center-block w-100" src="images/slider-22.jpg" alt="third slide" />
             </div>
-            <div
-            class="carousel-item d-flex justify-content-center"
-            data-interval="2000"
-          >
-            <img
-              class="center-block w-100"
-              src="images/slider-27.jpg"
-              alt="third slide"
-            />
-          </div>
+            <!-- fifith image -->
+            <div class="carousel-item d-flex justify-content-center gallery-img" data-interval="2000">
+              <img class="center-block w-100" src="images/slider-27.jpg" alt="third slide" />
+            </div>
           </div>
 
-          <a
-            href="#myCarousel1"
-            class="carousel-control-prev"
-            role="button"
-            data-slide="prev"
-          >
+          <!-- this is the previous button like the arrow ex, with data-slide controling the actual back end < -->
+          <a href="#myCarousel1" class="carousel-control-prev" role="button" data-slide="prev">
             <span class="sr-only">Previous</span>
+            <!-- the pre-built icon from a bootstrap class -->
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           </a>
-
-          <a
-            href="#myCarousel1"
-            class="carousel-control-next"
-            role="button"
-            data-slide="next"
-          >
+          <!-- this is the nexxt button ex. >, with data-slide controling the actual back end -->
+          <a href="#myCarousel1" class="carousel-control-next" role="button" data-slide="next">
             <span class="sr-only">Next</span>
+            <!-- the pre-built icon from a bootstrap class -->
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
           </a>
         </div>
       </div>
+
+      <!-- when it turns into a medium type screen I would like it to take the whole space there is, however only take half when your screen is large -->
       <div class="col-sm-12 col-md-12 col-lg-6  p-4">
-        <div
-          id="myCarousels"
-          data-ride="carousel"
-          class="carousel slide carousel-fade"
-        >
+        <!-- the div that holdes the carosuel -->
+        <div id="myCarousels" data-ride="carousel" class="carousel slide carousel-fade">
+          <!-- this is the carousel indicators at the bottom (the lines) -->
           <ol class="carousel-indicators">
-            <li
-              data-target="#myCarousels"
-              data-slide-to="0"
-              class="active"
-            ></li>
+            <!-- this is the first line in the carosuel which will take you to image 1 -->
+            <li data-target="#myCarousels" data-slide-to="0" class="active"></li>
+            <!-- this is the first line in the carosuel which will take you to image 2 -->
             <li data-target="#myCarousels" data-slide-to="1"></li>
+            <!-- this is the first line in the carosuel which will take you to image 3 -->
             <li data-target="#myCarousels" data-slide-to="2"></li>
           </ol>
+
+
           <div class="carousel-inner">
+            <!-- making this the first carousel item, making it a flex box and then making the contect centered inside of it -->
             <div class="carousel-item active" data-interval="true">
-              <img
-                class="d-block w-100"
-                src="images/slider-1.jpg"
-                alt="First slide"
-              />
+              <!-- the first image, for each image I make sure that it takes up 100% of the available width in the div that it can -->
+              <img class="d-block w-100 gallery-img" src="images/slider-1.jpg" alt="First slide" />
             </div>
+            <!-- the second image (data interval just states how many milliseconds you spend on a pages) -->
             <div class="carousel-item" data-interval="2000">
-              <img
-                class="d-block w-100"
-                src="images/slider-28.jpg"
-                alt="second slide"
-              />
+              <!-- the second image, for each image I make sure that it takes up 100% of the available width in the div that it can -->
+              <img class="d-block w-100 gallery-img" src="images/slider-28.jpg" alt="second slide" />
             </div>
+            <!-- the third image in the slide -->
             <div class="carousel-item" data-interval="2000">
-              <img
-                class="d-block w-100"
-                src="images/slider-6.jpg"
-                alt="third slide"
-              />
+              <!-- the third image for, each image I make sure that it takes up 100% of the available width in the div that it can -->
+              <img class="d-block w-100 gallery-img" src="images/slider-6.jpg" alt="third slide" />
             </div>
           </div>
 
-          <a
-            href="#myCarousels"
-            class="carousel-control-prev"
-            role="button"
-            data-slide="prev"
-          >
+          <!-- this is the previous button like the arrow ex, with data-slide controling the actual back end < -->
+          <a href="#myCarousels" class="carousel-control-prev" role="button" data-slide="prev">
             <span class="sr-only">Previous</span>
+            <!-- the pre-built icon from a bootstrap class -->
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           </a>
-
-          <a
-            href="#myCarousels"
-            class="carousel-control-next"
-            role="button"
-            data-slide="next"
-          >
+          <!-- this is the nexxt button ex. >, with data-slide controling the actual back end -->
+          <a href="#myCarousels" class="carousel-control-next" role="button" data-slide="next">
             <span class="sr-only">Next</span>
+            <!-- the pre-built icon from a bootstrap class -->
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
           </a>
         </div>
       </div>
+
+            <!-- when it turns into a medium type screen I would like it to take the whole space there is, however only take half when your screen is large -->
       <div class="col-sm-12 col-md-12 col-lg-6 p-4">
-        <div
-          id="myCarousels"
-          data-ride="carousel"
-          class="carousel slide carousel-fade"
-        >
+        <!-- the div that holdes the carosuel -->
+        <div id="myCarousels" data-ride="carousel" class="carousel slide carousel-fade">
+          <!-- this is the carousel indicators at the bottom (the lines) -->
           <ol class="carousel-indicators">
-            <li
-              data-target="#myCarousels"
-              data-slide-to="0"
-              class="active"
-            ></li>
+            <!-- this is the first line in the carosuel which will take you to image 1 -->
+            <li data-target="#myCarousels" data-slide-to="0" class="active"></li>
+
+            <!-- this is the first line in the carosuel which will take you to image 2 -->
             <li data-target="#myCarousels" data-slide-to="1"></li>
+
+            <!-- this is the first line in the carosuel which will take you to image 3 -->
             <li data-target="#myCarousels" data-slide-to="2"></li>
           </ol>
           <div class="carousel-inner">
+            <!-- making this the first carousel item, making it a flex box and then making the contect centered inside of it -->
             <div class="carousel-item active" data-interval="true">
-              <img
-                class="d-block w-100"
-                src="images/gallery-1.jpg"
-                alt="First slide"
-              />
+              <!-- the first image for each image I make sure that it takes up 100% of the available width in the div that it can -->
+              <img class="d-block w-100 gallery-img " src="images/gallery-1.jpg" alt="First slide" />
             </div>
+            <!-- the second image (data interval just states how many milliseconds you spend on a pages) -->
             <div class="carousel-item" data-interval="2000">
-              <img
-                class="d-block w-100"
-                src="images/gallery-3.jpg"
-                alt="second slide"
-              />
+              <img class="d-block w-100 gallery-img" src="images/gallery-3.jpg" alt="second slide" />
             </div>
+            <!-- the third image in the slide -->
             <div class="carousel-item" data-interval="2000">
-              <img
-                class="d-block w-100"
-                src="images/gallery-2.jpg"
-                alt="third slide"
-              />
+              <img class="d-block w-100 gallery-img" src="images/gallery-2.jpg" alt="third slide" />
             </div>
           </div>
 
-          <a
-            href="#myCarousels"
-            class="carousel-control-prev"
-            role="button"
-            data-slide="prev"
-          >
+          <!-- this is the previous button like the arrow ex, with data-slide controling the actual back end < -->
+          <a href="#myCarousels" class="carousel-control-prev" role="button" data-slide="prev">
             <span class="sr-only">Previous</span>
+            <!-- the pre-built icon from a bootstrap class -->
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           </a>
 
-          <a
-            href="#myCarousels"
-            class="carousel-control-next"
-            role="button"
-            data-slide="next"
-          >
+          <!-- this is the nexxt button ex. >, with data-slide controling the actual back end -->
+          <a href="#myCarousels" class="carousel-control-next" role="button" data-slide="next">
             <span class="sr-only">Next</span>
+            <!-- the pre-built icon from a bootstrap class -->
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
           </a>
         </div>
       </div>
     </div>
-  </div>
+    </div>
+  </main>
 
-
-    <!-- <footer class="footer mt-auto py-3 bg-light">
+  <!-- <footer class="footer mt-auto py-3 bg-light">
       <div class="container">
         <span class="text-muted">Lena Taubes</span>
       </div>
     </footer> -->
-    <!-- just some more importing with bootstrap CDN snippet-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-    <!-- <script src="scripts/background.js"></script> -->
-  </body>
+  <!-- just some more importing with bootstrap CDN snippet-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  <!-- <script src="scripts/background.js"></script> -->
+</body>
+
 </html>

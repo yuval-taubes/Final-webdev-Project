@@ -1,177 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="Description" content="Enter your description here" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="stylesheets/style.css" />
-    <title>Home</title>
-    <style>
 
-    </style>
-  </head>
-  <body>
-    <!-- makes this a navbar and also to expand from a menu when it reaches a medium sized screen (list of breakpoints here https://getbootstrap.com/docs/5.0/layout/breakpoints/)  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+  <link src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+  <link rel="stylesheet" href="stylesheets/style.css" />
+
+  <title>Home</title>
+  <style>
+  </style>
+</head>
+
+<body>
+  <!-- makes this a navbar and also to expand from a menu when it reaches a medium sized screen (list of breakpoints here https://getbootstrap.com/docs/5.0/layout/breakpoints/)  
     It also makes it so the name logo and nav links are on opposite sides of the screen-->
-    <nav class="navbar navbar-expand-lg justify-content-between">
+  <nav class="navbar navbar-expand-lg justify-content-between">
 
-      <!-- this is The Lena Taubes pops up in the top left -->
-      <div id="NameLogo">Lena Taubes</div>
+    <!-- this is The Lena Taubes pops up in the top left which links to her facebook -->
+    <a class= "nameLogoLink" href="https://www.facebook.com/lena.taubes">
+    <div class="nameLogo">Lena Taubes</div>
+    </a>
 
-      <!-- this does a couple things, it is the button settings for the menu and it also determines wheher the navbar is in light mode or dark (read here for more info https://getbootstrap.com/docs/5.0/components/navbar/#color-schemes)-->
-      <button
-        class="navbar-toggler navbar-light"
-        type="button"
-        data-toggle="collapse"
-        data-target="#main-navigation"
-      >
+    <!-- this does a couple things, it is the button settings for the menu and it also determines wheher the navbar is in light mode or dark (read here for more info https://getbootstrap.com/docs/5.0/components/navbar/#color-schemes)-->
+    <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#main-navigation">
+      <!-- this is the actual button menu-->
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <!-- this is the actual button menu-->
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- this is the place where the links are stored, and this is where it tells them what to collapse into a menu -->
-      <div class="collapse navbar-collapse" id="main-navigation">
-
-        <!-- prebuilt class for ul named nav -->
-        <ul class="nav">
-
-          <!-- nav item is a prebuilt class for list items-->
-          <li class="nav-item">
-
-            <!-- nav link is a prebuilt class for anchor tags -->
-            <a class="nav-link" href="index.html">Home</a>
-
-          </li>
-          <!-- nav item is a prebuilt class for list items-->
-          <li class="nav-item">
-
-            <!-- this is the dropdown for the galleries (gotten from here, 1st solution https://stackoverflow.com/questions/12458522/bootstrap-dropdown-not-working)  -->
-            <div class="dropdown">
-
-              <!-- in this class it states to be treated as a nav-link and when clicked to open a dropdown menu -->
-              <a
-                              
-                class="dropdown-toggle nav-link"
-                data-toggle="dropdown"
-                href="#"
-                >Galleries</a
-              >
-              <!-- tells the ul that this is a dropdown menu -->
-              <ul class="dropdown-menu" role="menu">
-
+    <!-- this is the place where the links are stored, and this is where it tells them what to collapse into a menu -->
+    <div class="collapse navbar-collapse main-navigation">
+      <!-- prebuilt class for ul named nav -->
+      <ul class="nav">
+        <!-- nav item is a prebuilt class for list items-->
+        <li class="nav-item">
+          <!-- nav link is a prebuilt class for anchor tags -->
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <!-- nav item is a prebuilt class for list items-->
+        <li class="nav-item">
+          <!-- this is the dropdown for the galleries (gotten from here, 1st solution https://stackoverflow.com/questions/12458522/bootstrap-dropdown-not-working)  -->
+          <div class="dropdown">
+            <!-- in this class it states to be treated as a nav-link and when clicked to open a dropdown menu -->
+            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Galleries</a>
+            <!-- tells the ul that this is a dropdown menu -->
+            <ul class="dropdown-menu" role="menu">
+              <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
+              <li class="nav-item">
+                <!-- nav item is a prebuilt class for list items-->
+                <a class="nav-link" href="gallery1.html">Motorcycle</a>
+              </li>
+              <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
+              <li class="nav-item">
                 <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
-                <li class="nav-item">
+                <a class="nav-link nav-link-active" href="gallery2.html">Motorvechile</a>
+              </li>
 
-                  <!-- nav item is a prebuilt class for list items-->
-                  <a class="nav-link" href="gallery1.html">Motorcycle</a>
-                  
-                </li>
-                <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
-                <li class="nav-item">
+              <!--part of the dropdown menu -->
+              <li class="divider nav-item"></li>
+            </ul>
+          </div>
+        </li>
 
-                  <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
-                  <a class="nav-link" href="gallery2.html">Motorvechile</a>
-
-                </li>
-                
-                <!--part of the dropdown menu -->
-                <li class="divider nav-item"></li>
-              </ul>
-            </div>
-          </li>
-
-          <!-- link to contact page -->
-          <li class="nav-item">
-            <!-- nav link is a prebuilt class (just handy to use) -->
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- gallery tutroial i followed https://www.youtube.com/watch?v=h5v2LVFmbMY-->
-    <div class="container-fluid">
-
-      <div class="row mt-4">
-
-        <div class="item col-sm-6 col-md-4 mb-3">
-          <a href="images/gallery-1.jpg" class="fancybox" data-fancybox="gallery1">
-            <img src="images/gallery-1.jpg" width="100%" height="100%">
-          </a>
-        </div>
-        <div class="item col-sm-6 col-md-4 mb-3">
-          <a href="images/gallery-2.jpg" class="fancybox" data-fancybox="gallery1">
-            <img src="images/gallery-2.jpg" width="100%" height="100%">
-          </a>
-        </div>
-        <div class="item col-sm-6 col-md-4 mb-3">
-          <a href="images/gallery-3.jpg" class="fancybox" data-fancybox="gallery1">
-            <img src="images/gallery-3.jpg" width="100%" height="100%">
-          </a>
-        </div>
-        <div class="item col-sm-6 col-md-4 mb-3">
-          <a href="images/gallery-4.jpg" class="fancybox" data-fancybox="gallery1">
-            <img src="images/gallery-4.jpg" width="100%" height="100%">
-          </a>
-        </div>
-        <div class="item col-sm-6 col-md-4 mb-3">
-          <a href="images/gallery-5.jpg" class="fancybox" data-fancybox="gallery1">
-            <img src="images/gallery-5.jpg" width="100%" height="100%">
-          </a>
-        </div>
-        <div class="item col-sm-6 col-md-4 mb-3">
-          <a href="images/gallery-6.jpg" class="fancybox" data-fancybox="gallery1">
-            <img src="images/gallery-6.jpg" width="100%" height="100%">
-          </a>
-        </div>
-        <div class="item col-sm-6 col-md-4 mb-3">
-          <a href="images/gallery-7.jpg" class="fancybox" data-fancybox="gallery1">
-            <img src="images/gallery-7.jpg" width="100%" height="100%">
-          </a>
-        </div>
-        <div class="item col-sm-6 col-md-4 mb-3">
-          <a href="images/gallery-8.jpg" class="fancybox" data-fancybox="gallery1">
-            <img src="images/gallery-8.jpg" width="100%" height="100%">
-          </a>
-        </div>
-        <div class="item col-sm-6 col-md-4 mb-3">
-          <a href="images/gallery-9.jpg" class="fancybox" data-fancybox="gallery1">
-            <img src="images/gallery-9.jpg" width="100%" height="100%">
-          </a>
-        </div>
-        <div class="item col-sm-6 col-md-4 mb-3">
-          <a href="images/gallery-10.jpg" class="fancybox" data-fancybox="gallery1">
-            <img src="images/gallery-10.jpg" width="100%" height="100%">
-          </a>
-        </div>
-        <div class="item col-sm-6 col-md-4 mb-3">
-          <a href="images/gallery-11.jpg" class="fancybox" data-fancybox="gallery1">
-            <img src="images/gallery-11.jpg" width="100%" height="100%">
-          </a>
-        </div>
-        <div class="item col-sm-6 col-md-4 mb-3">
-          <a href="images/gallery-tbd.jpg" class="fancybox" data-fancybox="gallery1">
-            <img src="images/gallery-tbd.jpg" width="100%" height="100%">
-          </a>
-        </div>
-
-      </div>
-
+        <!-- link to contact page -->
+        <li class="nav-item">
+          <!-- nav link is a prebuilt class (just handy to use) -->
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
     </div>
+  </nav>
+  <main>
+  <!-- gallery tutroial I followed https://www.yogggggutube.com/watch?v=h5v2LVFmbMY-->
 
+  <!-- IMPORTANT I am only going to comment one of the divs that hold the img and anchor, as they are all the same only different in the image link -->
+  <!-- a container that takes up 100% of the width  -->
+  <div class="container-fluid">
+    <!-- a row to store all the images -->
+    <div class="row mt-4">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-    <!-- <script src="scripts/background.js"></script> -->
-  </body>
+      <!-- sizing for the each image -->
+      <div class="item col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <!-- the anchor tag links to the image for a close look -->
+        <a href="images/gallery2-1.jpg" class="fancybox" data-fancybox="gallery2">
+          <!-- making sure the img take 100% of the width available (why it works Idk but the tutorial did it so I followed) -->
+          <img src="images/slider-9.jpg" class="gallery-img" width="100%" />
+        </a>
+      </div>
+      <div class="item col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <a href="images/slider-5.jpg" class="fancybox" data-fancybox="gallery2">
+          <img src="images/slider-5.jpg" class="gallery-img" width="100%" />
+        </a>
+      </div>
+      <div class="item col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <a href="images/gallery2-3.jpg" class="fancybox" data-fancybox="gallery2">
+          <img src="images/gallery2-3.jpg" class="gallery-img" width="100%" />
+        </a>
+      </div>
+      <div class="item col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <a href="images/gallery2-4.jpg" class="fancybox" data-fancybox="gallery2">
+          <img src="images/gallery2-4.jpg" class="gallery-img" width="100%" />
+        </a>
+      </div>
+      <div class="item col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <a href="images/gallery2-5.jpg" class="fancybox" data-fancybox="gallery2">
+          <img src="images/gallery2-5.jpg" class="gallery-img" width="100%" />
+        </a>
+      </div>
+      <div class="item col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <a href="images/gallery2-6.jpg" class="fancybox" data-fancybox="gallery2">
+          <img src="images/gallery2-6.jpg" class="gallery-img" width="100%" />
+        </a>
+      </div>
+      <div class="item col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <a href="images/gallery2-7.jpg" class="fancybox" data-fancybox="gallery2">
+          <img src="images/gallery2-7.jpg" class="gallery-img" width="100%" />
+        </a>
+      </div>
+      <div class="item col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <a href="images/gallery2-8.jpg" class="fancybox" data-fancybox="gallery2">
+          <img src="images/gallery2-8.jpg" class="gallery-img" width="100%" />
+        </a>
+      </div>
+      <div class="item col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <a href="images/gallery2-9.jpg" class="fancybox" data-fancybox="gallery2">
+          <img src="images/gallery2-9.jpg" class="gallery-img" width="100%" />
+        </a>
+      </div>
+      <div class="item col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <a href="images/gallery2-10.jpg" class="fancybox" data-fancybox="gallery2">
+          <img src="images/gallery2-10.jpg" class="gallery-img" width="100%" />
+        </a>
+      </div>
+      <div class="item col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <a href="images/gallery2-11.jpg" class="fancybox" data-fancybox="gallery2">
+          <img src="images/gallery2-11.jpg" class="gallery-img" width="100%" />
+        </a>
+      </div>
+      <div class="item col-sm-12 col-md-12 col-lg-6 col-xl-4 mb-3">
+        <a href="images/gallery2-12.jpg" class="fancybox" data-fancybox="gallery2">
+          <img src="images/gallery2-1.jpg" class="gallery-img" width="100%" />
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  <!-- <script src="scripts/background.js"></script> -->
+</body>
+
 </html>

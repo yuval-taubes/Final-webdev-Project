@@ -1,189 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="Description" content="Enter your description here" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
 
-    <link rel="stylesheet" href="stylesheets/style.css" />
-    <title>Title</title>
-  </head>
-  <body>
-  
-    <!--This is the tutorial I used for the front end https://www.youtube.com/watch?v=s6rF1Josk9M&t=205s&ab_channel=Webdev -->
-    <!-- this is the tutorial I used for the back end https://www.youtube.com/watch?v=In0nB0ABaUk&ab_channel=WebDevSimplifiedWebDevSimplified -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="Description" content="Enter your description here" />
+  <!-- linking bootstrap here  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" />
 
+  <!-- linking bootstrap here  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
-    <!-- makes this a navbar and also to expand from a menu when it reaches a medium sized screen (list of breakpoints here https://getbootstrap.com/docs/5.0/layout/breakpoints/)  
+  <link rel="stylesheet" href="stylesheets/style.css" />
+  <title>Title</title>
+</head>
+<style>
+
+</style>
+
+<body>
+  <!--This is the tutorial I used for the front end https://www.youtube.com/watch?v=s6rF1Josk9M&t=205s&ab_channel=Webdev -->
+  <!-- this is the tutorial I used for the back end https://www.youtube.com/watch?v=In0nB0ABaUk&ab_channel=WebDevSimplifiedWebDevSimplified -->
+
+  <!-- makes this a navbar and also to expand from a menu when it reaches a medium sized screen (list of breakpoints here https://getbootstrap.com/docs/5.0/layout/breakpoints/)  
     It also makes it so the name logo and nav links are on opposite sides of the screen-->
-    <nav class="navbar navbar-expand-lg justify-content-between">
+  <nav class="navbar navbar-expand-lg justify-content-between">
 
-      <!-- this is The Lena Taubes pops up in the top left -->
-      <div id="NameLogo">Lena Taubes</div>
+    <!-- this is The Lena Taubes pops up in the top left which links to her facebook -->
+    <a class= "nameLogoLink" href="https://www.facebook.com/lena.taubes">
+    <div class="nameLogo">Lena Taubes</div>
+    </a>
 
-      <!-- this does a couple things, it is the button settings for the menu and it also determines wheher the navbar is in light mode or dark (read here for more info https://getbootstrap.com/docs/5.0/components/navbar/#color-schemes)-->
-      <button
-        class="navbar-toggler navbar-light"
-        type="button"
-        data-toggle="collapse"
-        data-target="#main-navigation"
-      >
+    <!-- this does a couple things, it is the button settings for the menu and it also determines wheher the navbar is in light mode or dark (read here for more info https://getbootstrap.com/docs/5.0/components/navbar/#color-schemes)-->
+    <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#main-navigation">
+      <!-- this is the actual button menu-->
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <!-- this is the actual button menu-->
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- this is the place where the links are stored, and this is where it tells them what to collapse into a menu -->
-      <div class="collapse navbar-collapse" id="main-navigation">
-
-        <!-- prebuilt class for ul named nav -->
-        <ul class="nav">
-
-          <!-- nav item is a prebuilt class for list items-->
-          <li class="nav-item">
-
-            <!-- nav link is a prebuilt class for anchor tags -->
-            <a class="nav-link" href="index.html">Home</a>
-
-          </li>
-          <!-- nav item is a prebuilt class for list items-->
-          <li class="nav-item">
-
-            <!-- this is the dropdown for the galleries (gotten from here, 1st solution https://stackoverflow.com/questions/12458522/bootstrap-dropdown-not-working)  -->
-            <div class="dropdown">
-
-              <!-- in this class it states to be treated as a nav-link and when clicked to open a dropdown menu -->
-              <a
-                              
-                class="dropdown-toggle nav-link"
-                data-toggle="dropdown"
-                href="#"
-                >Galleries</a
-              >
-              <!-- tells the ul that this is a dropdown menu -->
-              <ul class="dropdown-menu" role="menu">
-
+    <!-- this is the place where the links are stored, and this is where it tells them what to collapse into a menu -->
+    <div class="collapse navbar-collapse main-navigation">
+      <!-- prebuilt class for ul named nav -->
+      <ul class="nav">
+        <!-- nav item is a prebuilt class for list items-->
+        <li class="nav-item">
+          <!-- nav link is a prebuilt class for anchor tags -->
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <!-- nav item is a prebuilt class for list items-->
+        <li class="nav-item">
+          <!-- this is the dropdown for the galleries (gotten from here, 1st solution https://stackoverflow.com/questions/12458522/bootstrap-dropdown-not-working)  -->
+          <div class="dropdown">
+            <!-- in this class it states to be treated as a nav-link and when clicked to open a dropdown menu -->
+            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Galleries</a>
+            <!-- tells the ul that this is a dropdown menu -->
+            <ul class="dropdown-menu" role="menu">
+              <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
+              <li class="nav-item">
+                <!-- nav item is a prebuilt class for list items-->
+                <a class="nav-link" href="gallery1.html">Motorcycle</a>
+              </li>
+              <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
+              <li class="nav-item">
                 <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
-                <li class="nav-item">
+                <a class="nav-link" href="gallery2.html">Motorvechile</a>
+              </li>
 
-                  <!-- nav item is a prebuilt class for list items-->
-                  <a class="nav-link" href="gallery1.html">Motorcycle</a>
-                  
-                </li>
-                <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
-                <li class="nav-item">
+              <!--part of the dropdown menu -->
+              <li class="divider nav-item"></li>
+            </ul>
+          </div>
+        </li>
 
-                  <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
-                  <a class="nav-link" href="gallery2.html">Motorvechile</a>
+        <!-- link to contact page -->
+        <li class="nav-item">
+          <!-- nav link is a prebuilt class (just handy to use) -->
+          <a class="nav-link nav-link-active" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-                </li>
-                
-                <!--part of the dropdown menu -->
-                <li class="divider nav-item"></li>
-              </ul>
-            </div>
-          </li>
-
-          <!-- link to contact page -->
-          <li class="nav-item">
-            <!-- nav link is a prebuilt class (just handy to use) -->
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
+  <main>
+    <div class="row justify-content-center">
       <!-- the get in touch at the top of the screen -->
-      <section class="get-in-touch">
+      <section class="get-in-touch col-lg-8 col-md-10 col-sm-10 ">
         <h1 class="title">get in touch</h1>
-        
+
         <form>
           <!-- div to hold the contact us form -->
           <div class="container">
-
             <!-- a row to hol columns -->
             <div class="contact-form row">
-
               <!-- a form field that takes up 5 of the available 12 slot when in a large screen and usees all available space when smaller than a lg screen -->
-              <div class="form-field col-lg-5">
-
+              <div class="form-field col-lg-5 ">
                 <!-- Name input known as nameInput in javascript file -->
-                <input
-                  id="name"
-                  class="input-text"
-                  type="text"
-                  name=""
-                  placeholder="First And Last Name"
-                />
+                <input id="name" class="input-text" type="text" name="" placeholder="First And Last Name" />
                 <!-- the label for name input -->
                 <label for="name" class="label">Name</label>
               </div>
 
               <!-- a form field that takes up 5 of the available 12 slot when in a large screen and usees all available space when smaller than a lg screen -->
-              <div class="form-field col-lg-5">
-                <input
-                  id="email"
-                  class="input-text"
-                  type="email"
-                  name=""
-                  placeholder="example@email.com"
-                />
+              <div class="form-field col-lg-5 ">
+                <!-- email input known as email in javascript -->
+                <input id="email" class="input-text" type="email" name="" placeholder="example@email.com" />
+                <!-- label for name input -->
                 <label for="email" class="label">Email</label>
               </div>
-              <div class="form-field col-lg-5">
+
+              <!-- a form field that takes up 5 of the available 12 slot when in a large screen and usees all available space when smaller than a lg screen -->
+              <div class="form-field col-lg-5 ">
+                <!-- email input known as email in javascript -->
                 <input id="company" class="input-text" type="text" name="" />
+                <!-- label for name input -->
                 <label for="company" class="label">Company name</label>
               </div>
-              <div class="form-field col-lg-5">
-                <input
-                  id="phone"
-                  class="input-text"
-                  type="text"
-                  name=""
-                  placeholder="(xxx)-xxx-xxxx"
-                />
+
+              <!-- a form field that takes up 5 of the available 12 slot when in a large screen and usees all available space when smaller than a lg screen -->
+              <div class="form-field col-lg-5 ">
+                <!-- email input known as email in javascript -->
+                <input id="phone" class="input-text" type="text" name="" placeholder="(xxx)-xxx-xxxx" />
+                <!-- label for name input -->
                 <label for="phone" class="label">contact number</label>
               </div>
+
+              <!-- a form field that takes up 5 of the available 12 slot when in a large screen and usees all available space when smaller than a lg screen -->
               <div class="form-field col-lg-11">
-                <input
-                  id="message"
-                  class="input-text"
-                  type="text"
-                  name=""
-                  placeholder="Your Message Here"
-                />
+                <!-- email input known as email in javascript -->
+                <input id="message" class="input-text" type="text" name="" placeholder="Your Message Here"/>
+                <!-- label for name input -->
                 <label for="message" class="label">Message</label>
               </div>
-              <div class="form-field col-lg-12">
-                <input
-                  class="submit-btn"
-                  type="button"
-                  value="Submit"
-                  name=""
-                  onclick="checkInput()"
-                />
+
+              <!-- a form field that takes up 12 of the available 12 slot when in a large screen and usees all available space when smaller than a lg screen -->
+              <div class="form-field col-lg-11">
+                <!-- this is the sumbit button and when its clicked the function from contact.js runs and sees if ther is any error in the previous form -->
+                <input class="submit-btn" type="button" value="Submit" name="" onclick="checkInput()" />
               </div>
-              <div col-lg-12>
-                <div id="errorElement"><p class="errorText"></p></div>
+
+              <!-- a form field that takes up 12 of the available 12 slot when in a large screen and usees all available space when smaller than a lg screen -->
+              <div class="col-lg-11 error-container">
+                <!-- this is where the error text pops up when running checkInput() -->
+                <div id="errorElement">
+                  <!-- the paragraph tags where the code appears -->
+                  <p class="errorText"></p>
+                </div>
               </div>
             </div>
           </div>
         </form>
       </section>
+    </div>
+  </main>
 
+  <!-- linking my contact.js page -->
+  <script src="scripts/contact.js"></script>
+  <!-- linking jquery here  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <!-- linking bootstrap here  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <!-- linking bootstrap here  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
 
-    <script src="scripts/contact.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-  </body>
 </html>

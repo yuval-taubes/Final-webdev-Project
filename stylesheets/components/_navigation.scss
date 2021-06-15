@@ -1,44 +1,83 @@
-
+@import "../utils/variables";
+@import "../utils/mixins";
 
 .navbar {
     // making the background a white color
     background-color: white;
-
 }
 
 .navbar-collapse {
-    // when the navbar is collapsed I want the lightbox to be shoved over to the right
+    // when the navbar is collapsed I want the menu to be shoved over to the right
     justify-content: flex-end;
-    align-items: flex-end;
+
     // flex grow is automatically set to 1 as a defualt in bootstrap, by setting it to default and using the !importat my nav (when on a large screen) won't get messed up
     flex-grow: 0 !important;
 }
+
 
 .nav-link {
     color: black;
     // making the cursor a pointer when hovering over the anchors
     cursor: pointer;
+
     font-size: 25px;
-    // the imported font (poppins)
+
+    // the imported font (poppins)    
     font-family: "Poppins", sans-serif;
+
     padding: 30px;
+
+    // when I hover or focus on my nav-links I want them to turn into a gradient of red and purple
     &:hover,
     &:focus {
         // when I hover and focus I want the nav links to change to a gradient color
-        background: linear-gradient(to right, #f4524d 0%, #5543ca 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        background: linear-gradient(to right, $grad-color-red 0%, $grad-color-purple 100%);
+        
+        // these have to be here, to actualy make the text color a gradient and not the background
+        @include gradient_text;
     }
 }
 
-#NameLogo {
+// I dont want there to be any change when you hover, focus or have visited lena taubes facebook with this link
+.nameLogoLink{
+    &:hover,
+    &:focus,
+    &:visited{
+        text-decoration: none;
+    }
+}
+
+.nameLogo {
     // makes the "Lena Taubes" a gradient
-    background: linear-gradient(to right, #f4524d 0%, #5543ca 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: linear-gradient(to right, $grad-color-red 0%, $grad-color-purple 100%);
+    // these have to be here, to actualy make the text color a gradient and not the background
+    @include gradient_text;
     font-size: 60px;
     // the imported font (poppins)
     font-family: "Poppins", sans-serif;
     padding: 10px;
     text-align: center;
+}
+.nav-link-active {
+    color: black;
+    // making the cursor a pointer when hovering over the anchors
+    cursor: pointer;
+
+    font-size: 25px;
+
+    text-decoration: underline;
+    // the imported font (poppins)    
+    font-family: "Poppins", sans-serif;
+
+    padding: 30px;
+
+    // when I hover or focus on my nav-links I want them to turn into a gradient of red and purple
+    &:hover,
+    &:focus {
+        // when I hover and focus I want the nav links to change to a gradient color
+        background: linear-gradient(to right, $grad-color-red 0%, $grad-color-purple 100%);
+        
+        // these have to be here, to actualy make the text color a gradient and not the background
+        @include gradient_text;
+    }
 }

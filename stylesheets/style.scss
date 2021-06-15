@@ -1,22 +1,28 @@
 @import "utils/variables";
 @import "components/navigation";
-@import "components/_carousel.scss";
-@import "pages/_experiment.scss";
+@import "pages/_index.scss";
 @import "pages/_contact.scss";
+@import "pages/_gallery";
 
 /*--- page ---*/
 // this is the body, pretty basic config
 
-*{
-    font-family: "Poppins", sans-serif;
+* {
+  // I chose a sans-serif font because i want the website to fell modern and new
+  font-family: "Poppins", sans-serif;
 }
+
 body {
-    padding: 0;
-    margin: 0;
-    background-color: white;
-
-    }
-
-
-
-
+  // did some very shoddy edditing for my background so it fits more seemlesly
+  background-image: url("../images/edited-background-page\(2\)\ \(lena\).png");
+  /* make sure the photo covers the background */
+  background-size: cover;
+  /* always wanting in to take 100% of the screen */
+  min-height: 100%;
+  min-width: 100%;
+  /* this allows me to set position location */
+  position: absolute;
+  /* make sure it starts at the right place */
+  left: 0;
+  top: 0;
+}

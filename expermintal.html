@@ -1,4 +1,3 @@
-<!-- Website Design taken from https://www.mpkelley.com/ -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,330 +5,202 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="Description" content="Enter your description here" />
-    <!-- linking poppins here (font) -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
     <!-- linking bootstrap here  -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
     />
-    <!-- and here, did this with a handy extension known as bootstrap CDN snippet-->
+
+    <!-- linking bootstrap here  -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
 
-    <title>Home</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
-    <link rel="stylesheet" href="stylesheets/pages/experiment.css" />
-    <style>
-
-      body{
-        background-image: url('../images/edited-background-page.png');
-	  background-size: cover;
-	  position: relative;
-    position: absolute;
-        min-height: 100%;
-        min-width: 100%;
-        left: 0;
-        top: 0;
-      }
-
-    </style>
+    <title>Title</title>
   </head>
+  <style>
 
+  </style>
   <body>
-    <!-- this entire website is one row. This is blatetly obvious when full screen however  -->
+    <!--This is the tutorial I used for the front end https://www.youtube.com/watch?v=s6rF1Josk9M&t=205s&ab_channel=Webdev -->
+    <!-- this is the tutorial I used for the back end https://www.youtube.com/watch?v=In0nB0ABaUk&ab_channel=WebDevSimplifiedWebDevSimplified -->
 
-    <!-- makes this a navbar and also to expand from a lightbox when it reaches a medium sized screen (list of breakpoints here https://getbootstrap.com/docs/5.0/layout/breakpoints/)  -->
-    <!-- makes this a navbar and also to expand from a lightbox when it reaches a medium sized screen (list of breakpoints here https://getbootstrap.com/docs/5.0/layout/breakpoints/)  -->
+    <!-- makes this a navbar and also to expand from a menu when it reaches a medium sized screen (list of breakpoints here https://getbootstrap.com/docs/5.0/layout/breakpoints/)  
+    It also makes it so the name logo and nav links are on opposite sides of the screen-->
     <nav class="navbar navbar-expand-lg justify-content-between">
-      <!-- this is The Lena Taubes pops up in the top left, not a bootstrap class -->
-      <div class="" id="NameLogo">Lena Taubes</div>
-      <!-- this is the actual ligthbox, and settings for it 
-        navbar-dark makes the lightbox a dark color
-        type button makes it toggleable
-        data-toggle way it visually animates
-        main navigation is how what information to put in the lightbox-->
+      <!-- this is The Lena Taubes pops up in the top left -->
+      <div class="nameLogo">Lena Taubes</div>
+
+      <!-- this does a couple things, it is the button settings for the menu and it also determines wheher the navbar is in light mode or dark (read here for more info https://getbootstrap.com/docs/5.0/components/navbar/#color-schemes)-->
       <button
         class="navbar-toggler navbar-light"
         type="button"
         data-toggle="collapse"
         data-target="#main-navigation"
       >
-        <!-- this is the icon for the lightbox -->
+        <!-- this is the actual button menu-->
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- this is the place where the links are stored, and this is where it tells them what to collapse into a lightbox -->
-      <div class="collapse navbar-collapse" id="main-navigation">
+
+      <!-- this is the place where the links are stored, and this is where it tells them what to collapse into a menu -->
+      <div class="collapse navbar-collapse main-navigation">
+        <!-- prebuilt class for ul named nav -->
         <ul class="nav">
-          <!-- nav item is a prebuilt class -->
+          <!-- nav item is a prebuilt class for list items-->
           <li class="nav-item">
-            <!-- nav link is a prebuilt class (just handy to use) -->
+            <!-- nav link is a prebuilt class for anchor tags -->
             <a class="nav-link" href="index.html">Home</a>
           </li>
-
+          <!-- nav item is a prebuilt class for list items-->
           <li class="nav-item">
+            <!-- this is the dropdown for the galleries (gotten from here, 1st solution https://stackoverflow.com/questions/12458522/bootstrap-dropdown-not-working)  -->
             <div class="dropdown">
+              <!-- in this class it states to be treated as a nav-link and when clicked to open a dropdown menu -->
               <a
                 class="dropdown-toggle nav-link"
                 data-toggle="dropdown"
                 href="#"
                 >Galleries</a
               >
+              <!-- tells the ul that this is a dropdown menu -->
               <ul class="dropdown-menu" role="menu">
+                <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
                 <li class="nav-item">
+                  <!-- nav item is a prebuilt class for list items-->
                   <a class="nav-link" href="gallery1.html">Motorcycle</a>
                 </li>
+                <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Motorvechile</a>
+                  <!-- nav item is a prebuilt class for list items (item of dropdown menu)-->
+                  <a class="nav-link" href="gallery2.html">Motorvechile</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Other</a>
-                </li>
+
+                <!--part of the dropdown menu -->
                 <li class="divider nav-item"></li>
               </ul>
             </div>
           </li>
 
+          <!-- link to contact page -->
           <li class="nav-item">
             <!-- nav link is a prebuilt class (just handy to use) -->
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link nav-link-active" href="contact.html">Contact</a>
           </li>
         </ul>
       </div>
     </nav>
-    <div class="row">
 
+    <main>
+      <div class="row justify-content-center">
+      <!-- the get in touch at the top of the screen -->
+      <section class="get-in-touch col-lg-6 col-md-10 col-sm-10 ">
+        <h1 class="title">get in touch</h1>
 
-      <!-- tutorial https://www.youtube.com/watch?v=ku_97a6Bgkg&ab_channel=AdrianTwarogAdrianTwarog -->
-      <div class=" col-sm-12 col-md-12 col-lg-6 profile-container">
+        <form>
+          <!-- div to hold the contact us form -->
+          <div class="container">
+            <!-- a row to hol columns -->
+            <div class="contact-form row">
+              <!-- a form field that takes up 5 of the available 12 slot when in a large screen and usees all available space when smaller than a lg screen -->
+              <div class="form-field col-lg-5">
+                <!-- Name input known as nameInput in javascript file -->
+                <input
+                  id="name"
+                  class="input-text"
+                  type="text"
+                  name=""
+                  placeholder="First And Last Name"
+                />
+                <!-- the label for name input -->
+                <label for="name" class="label">Name</label>
+              </div>
 
-        <h1 class="profile-heading">
-          About Me
-        </h1>
-        <p class="profile-text">
-          Hi, I am Lena Taubes a photographer. This website was made as a portfolio for me, and showcases some of my work. If you want to see more come visit my facebook <a href="https://www.facebook.com/lena.taubes"> here.</a>
-        </p>
-      </div>
-      <div class="col-sm-12 col-md-12 col-lg-6 p-4">
-        <div
-          id="myCarousel1"
-          data-ride="carousel"
-          class="carousel slide carousel-fade"
-        >
-          <ol class="carousel-indicators">
-            <li
-              data-target="#myCarousel1"
-              data-slide-to="0"
-              class="active"
-            ></li>
-            <li data-target="#myCarousel1" data-slide-to="1"></li>
-            <li data-target="#myCarousel1" data-slide-to="2"></li>
-            <li data-target="#myCarousel1" data-slide-to="3"></li>
-            <li data-target="#myCarousel1" data-slide-to="4"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div
-              class="carousel-item active d-flex justify-content-center"
-              data-interval="true"
-            >
-              <img
-                class="center-block w-100"
-                src="images/slider-12.jpg"
-                alt="First slide"
-              />
-            </div>
-            <div
-              class="carousel-item d-flex justify-content-center"
-              data-interval="2000"
-            >
-              <img
-                class="center-block w-100"
-                src="images/slider-20.jpg"
-                alt="second slide"
-              />
-            </div>
-            <div
-              class="carousel-item d-flex justify-content-center"
-              data-interval="2000"
-            >
-              <img
-                class="center-block w-100"
-                src="images/slider-22.jpg"
-                alt="third slide"
-              />
-            </div>
-            <div
-            class="carousel-item d-flex justify-content-center"
-            data-interval="2000"
-          >
-            <img
-              class="center-block w-100"
-              src="images/slider-27.jpg"
-              alt="third slide"
-            />
-          </div>
-          </div>
+              <!-- a form field that takes up 5 of the available 12 slot when in a large screen and usees all available space when smaller than a lg screen -->
+              <div class="form-field col-lg-5">
+                <!-- email input known as email in javascript -->
+                <input
+                  id="email"
+                  class="input-text"
+                  type="email"
+                  name=""
+                  placeholder="example@email.com"
+                />
+                <!-- label for name input -->
+                <label for="email" class="label">Email</label>
+              </div>
 
-          <a
-            href="#myCarousel1"
-            class="carousel-control-prev"
-            role="button"
-            data-slide="prev"
-          >
-            <span class="sr-only">Previous</span>
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </a>
+              <!-- a form field that takes up 5 of the available 12 slot when in a large screen and usees all available space when smaller than a lg screen -->
+              <div class="form-field col-lg-5">
+                <!-- email input known as email in javascript -->
+                <input id="company" class="input-text" type="text" name="" />
+                <!-- label for name input -->
+                <label for="company" class="label">Company name</label>
+              </div>
 
-          <a
-            href="#myCarousel1"
-            class="carousel-control-next"
-            role="button"
-            data-slide="next"
-          >
-            <span class="sr-only">Next</span>
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-12 col-lg-6  p-4">
-        <div
-          id="myCarousels"
-          data-ride="carousel"
-          class="carousel slide carousel-fade"
-        >
-          <ol class="carousel-indicators">
-            <li
-              data-target="#myCarousels"
-              data-slide-to="0"
-              class="active"
-            ></li>
-            <li data-target="#myCarousels" data-slide-to="1"></li>
-            <li data-target="#myCarousels" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-interval="true">
-              <img
-                class="d-block w-100"
-                src="images/slider-1.jpg"
-                alt="First slide"
-              />
-            </div>
-            <div class="carousel-item" data-interval="2000">
-              <img
-                class="d-block w-100"
-                src="images/slider-28.jpg"
-                alt="second slide"
-              />
-            </div>
-            <div class="carousel-item" data-interval="2000">
-              <img
-                class="d-block w-100"
-                src="images/slider-6.jpg"
-                alt="third slide"
-              />
+              <!-- a form field that takes up 5 of the available 12 slot when in a large screen and usees all available space when smaller than a lg screen -->
+              <div class="form-field col-lg-5">
+                <!-- email input known as email in javascript -->
+                <input
+                  id="phone"
+                  class="input-text"
+                  type="text"
+                  name=""
+                  placeholder="(xxx)-xxx-xxxx"
+                />
+                <!-- label for name input -->
+                <label for="phone" class="label">contact number</label>
+              </div>
+
+              <!-- a form field that takes up 5 of the available 12 slot when in a large screen and usees all available space when smaller than a lg screen -->
+              <div class="form-field col-lg-11">
+                <!-- email input known as email in javascript -->
+                <input
+                  id="message"
+                  class="input-text"
+                  type="text"
+                  name=""
+                  placeholder="Your Message Here"
+                />
+                <!-- label for name input -->
+                <label for="message" class="label">Message</label>
+              </div>
+
+              <!-- a form field that takes up 12 of the available 12 slot when in a large screen and usees all available space when smaller than a lg screen -->
+              <div class="form-field col-lg-12">
+                <!-- this is the sumbit button and when its clicked the function from contact.js runs and sees if ther is any error in the previous form -->
+                <input
+                  class="submit-btn"
+                  type="button"
+                  value="Submit"
+                  name=""
+                  onclick="checkInput()"
+                />
+              </div>
+
+              <!-- a form field that takes up 12 of the available 12 slot when in a large screen and usees all available space when smaller than a lg screen -->
+              <div class="col-lg-12 error-container">
+                <!-- this is where the error text pops up when running checkInput() -->
+                <div id="errorElement">
+                  <!-- the paragraph tags where the code appears -->
+                  <p class="errorText"></p>
+                </div>
+              </div>
             </div>
           </div>
-
-          <a
-            href="#myCarousels"
-            class="carousel-control-prev"
-            role="button"
-            data-slide="prev"
-          >
-            <span class="sr-only">Previous</span>
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </a>
-
-          <a
-            href="#myCarousels"
-            class="carousel-control-next"
-            role="button"
-            data-slide="next"
-          >
-            <span class="sr-only">Next</span>
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-12 col-lg-6 p-4">
-        <div
-          id="myCarousels"
-          data-ride="carousel"
-          class="carousel slide carousel-fade"
-        >
-          <ol class="carousel-indicators">
-            <li
-              data-target="#myCarousels"
-              data-slide-to="0"
-              class="active"
-            ></li>
-            <li data-target="#myCarousels" data-slide-to="1"></li>
-            <li data-target="#myCarousels" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-interval="true">
-              <img
-                class="d-block w-100"
-                src="images/gallery-1.jpg"
-                alt="First slide"
-              />
-            </div>
-            <div class="carousel-item" data-interval="2000">
-              <img
-                class="d-block w-100"
-                src="images/gallery-3.jpg"
-                alt="second slide"
-              />
-            </div>
-            <div class="carousel-item" data-interval="2000">
-              <img
-                class="d-block w-100"
-                src="images/gallery-2.jpg"
-                alt="third slide"
-              />
-            </div>
-          </div>
-
-          <a
-            href="#myCarousels"
-            class="carousel-control-prev"
-            role="button"
-            data-slide="prev"
-          >
-            <span class="sr-only">Previous</span>
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </a>
-
-          <a
-            href="#myCarousels"
-            class="carousel-control-next"
-            role="button"
-            data-slide="next"
-          >
-            <span class="sr-only">Next</span>
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </a>
-        </div>
-      </div>
+        </form>
+      </section>
     </div>
-  </div>
+    </main>
 
-
-    <!-- <footer class="footer mt-auto py-3 bg-light">
-      <div class="container">
-        <span class="text-muted">Lena Taubes</span>
-      </div>
-    </footer> -->
-    <!-- just some more importing with bootstrap CDN snippet-->
+    <!-- linking my contact.js page -->
+    <script src="scripts/contact.js"></script>
+    <!-- linking jquery here  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <!-- linking bootstrap here  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <!-- linking bootstrap here  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-    <!-- <script src="scripts/background.js"></script> -->
   </body>
 </html>

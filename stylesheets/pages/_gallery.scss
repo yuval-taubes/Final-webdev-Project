@@ -1,7 +1,4 @@
-
-      .item{
-        transition: .5s ease-in-out;
-      }
-      .item:hover{
-        filter: brightness(80%);
-      }
+// adding a border to my images inside gallery 1 and 2
+.gallery-img{
+    border:solid white 5px;
+}
