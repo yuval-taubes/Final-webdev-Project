@@ -85,7 +85,11 @@
         cursor: pointer;
         }
         .error-container {
-        text-align: center;
+          justify-content: center;
+    }
+    #errorElement{
+      text-align: center;
+      font-size: 18px;
     }
   }
 }

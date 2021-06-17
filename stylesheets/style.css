@@ -155,7 +155,14 @@
 }
 
 .contact-form .form-field .error-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-form .form-field #errorElement {
   text-align: center;
+  font-size: 18px;
 }
 
 .gallery-img {
